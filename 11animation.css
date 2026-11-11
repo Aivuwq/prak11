@@ -1,0 +1,66 @@
+
+/* Анимация полосы загрузки */
+.loading-section {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.loading-section h2 {
+    margin-bottom: 15px;
+}
+
+.loading-bar {
+    width: 80%;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.loading-progress {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, #00bcd4, #4caf50);
+    border-radius: 10px;
+
+    animation: loading 4s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Прозрачность карточек */
+.photo-card {
+    opacity: 0.5;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.photo-card:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Появление главного заголовка */
+.welcome h1 {
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

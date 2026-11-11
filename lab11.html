@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+
+    <link rel="stylesheet" href="11s.css">
+    <link rel="stylesheet" href="11animation.css">
+</head>
+<body>
+
+    <!-- Верхнее меню -->
+    <header class="header">
+        <div class="logo">My Gallery</div>
+
+        <nav class="navbar">
+            <a href="11lab.html">Главная</a>
+
+            <div class="dropdown">
+                <a href="photos.html">Фотографии ▾</a>
+                <div class="dropdown-menu">
+                    <a href="photos.html">Мои фото</a>
+                    <a href="posts.html">Публикации</a>
+                </div>
+            </div>
+
+            <a href="profile.html">Профиль</a>
+        </nav>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+    </header>
+
+    <!-- Боковое меню -->
+    <aside class="side-menu" id="sideMenu">
+        <button class="close-button" id="closeButton">✕</button>
+        <h2>Меню</h2>
+        <a href="11lab.html">Главная</a>
+        <a href="photos.html">Фотографии</a>
+        <a href="posts.html">Публикации</a>
+        <a href="profile.html">Профиль</a>
+    </aside>
+
+    <main>
+        <section class="welcome">
+            <h1>Добро пожаловать в My Gallery!</h1>
+            <p>Моя небольшая коллекция фотографий</p>
+        </section>
+
+        <!-- Анимация загрузки -->
+        <section class="loading-section">
+            <h2>Загрузка фотографий</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </section>
+
+        <!-- Карточки фотографий -->
+        <section class="gallery">
+            <h2>Мои фотографии</h2>
+
+            <div class="gallery-container">
+
+                <div class="photo-card">
+                    <img src="images/1.jpg" alt="Фото 1">
+                    <h3>Фотография 1</h3>
+                    <p>Красивый момент</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/2.jpg" alt="Фото 2">
+                    <h3>Фотография 2</h3>
+                    <p>Воспоминания</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/3.jpg" alt="Фото 3">
+                    <h3>Фотография 3</h3>
+                    <p>Мой любимый кадр</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/4.jpg" alt="Фото 4">
+                    <h3>Фотография 4</h3>
+                    <p>Красота вокруг нас</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Кнопка Share -->
+        <section class="share-section">
+            <h2>Поделиться страницей</h2>
+
+            <div class="share-container">
+                <button class="share-button" id="shareButton">
+                    Share
+                </button>
+
+                <div class="share-menu" id="shareMenu">
+                    <a href="#">WhatsApp</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 My Gallery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: #222;
+}
+
+/* Верхнее меню */
+.header {
+    background-color: #222;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: #00bcd4;
+}
+
+/* Выпадающее меню */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #333;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Кнопка бокового меню */
+.menu-button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Боковое меню */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #222;
+    padding: 70px 25px;
+    z-index: 20;
+
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.side-menu.active {
+    transform: translateX(0);
+}
+
+.side-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+}
+
+.side-menu a:hover {
+    color: #00bcd4;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Главный блок */
+.welcome {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.welcome h1 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.welcome p {
+    color: #666;
+    font-size: 18px;
+}
+
+/* Галерея */
+.gallery {
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.photo-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.photo-card h3 {
+    margin: 15px 0 8px;
+}
+
+/* Share */
+.share-section {
+    text-align: center;
+    padding: 40px;
+}
+
+.share-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.share-button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.share-menu {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 5;
+}
+
+.share-menu a {
+    display: block;
+    padding: 12px;
+    color: #222;
+    text-decoration: none;
+}
+
+.share-menu a:hover {
+    background-color: #eee;
+}
+
+.share-menu.active {
+    display: block;
+}
+
+/* Подвал */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Адаптация под телефон */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .navbar {
+        gap: 5px;
+        font-size: 13px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+}
